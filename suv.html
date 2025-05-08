@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUVs - CarZone</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .suv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .suv-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .suv-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .suv-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .suv-info {
+      padding: 20px;
+    }
+
+    .suv-info h3 {
+      margin-top: 0;
+      color: black;
+    }
+
+    .suv-info p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      margin-right: 900px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">← Back to Home</a>
+    <h1>Our SUV Collection</h1>
+    <p>Explore premium SUVs with space, comfort, and power</p>
+
+  </header>
+
+  <div class="container">
+    <div class="suv-grid">
+
+      <!-- SUV 1 -->
+      <div class="suv-card">
+        <img src="audi-removebg-preview.png" alt="Audi Q7">
+        <div class="suv-info">
+          <h3>Audi Q7</h3>
+          <p>Luxury full-size SUV with advanced tech, powerful performance, and three rows of comfort.</p>
+        </div>
+      </div>
+
+      <!-- SUV 2 -->
+      <div class="suv-card">
+        <img src="for-removebg-preview.png" alt="Toyota Fortuner">
+        <div class="suv-info">
+          <h3>Toyota Fortuner</h3>
+          <p>Rugged and reliable, the Fortuner is perfect for both city cruising and off-road adventures.</p>
+        </div>
+      </div>
+
+      <!-- SUV 3 -->
+      <div class="suv-card">
+        <img src="bmw-removebg-preview.png" alt="BMW X5">
+        <div class="suv-info">
+          <h3>BMW X5</h3>
+          <p>Bold design and intelligent drive – the BMW X5 delivers powerful luxury in an SUV package.</p>
+        </div>
+      </div>
+
+      <!-- SUV 4 -->
+      <div class="suv-card">
+        <img src="range-removebg-preview.png" alt="Range Rover">
+        <div class="suv-info">
+          <h3>Range Rover</h3>
+          <p>A blend of sophistication and performance, the Range Rover stands at the top of premium SUVs.</p>
+        </div>
+      </div>
+
+            <!-- SUV 5 -->
+            <div class="suv-card">
+              <img src="def-removebg-preview.png" alt="Defender">
+              <div class="suv-info">
+                <h3>Defender</h3>
+                <p>A blend of sophistication and performance, the Range Rover stands at the top of premium SUVs.</p>
+              </div>
+            </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

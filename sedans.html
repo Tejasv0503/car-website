@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sedans | Dogo Cars</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
+    }
+
+    .header {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .header a {
+      display: inline-block;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .header a:hover {
+      color: #fff;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .car-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .car-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+    }
+
+    .car-info {
+      padding: 15px;
+    }
+
+    .car-info h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .car-info p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="index.html">&larr; Back to</a>
+    <h1>Our Sedan Collection</h1>
+    <p>Discover sleek, fuel-efficient sedans built for comfort and performance.</p>
+  </div>
+
+  <section class="car-grid">
+    <div class="car-card">
+      <img src="camry.jpg" alt="Toyota Camry">
+      <div class="car-info">
+        <h3>Toyota Camry</h3>
+        <p>Efficient and reliable with a spacious interior and modern tech features.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="accord.jpg" alt="Honda Accord">
+      <div class="car-info">
+        <h3>Honda Accord</h3>
+        <p>Premium feel, advanced safety systems, and excellent fuel economy.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="series.jpg" alt="BMW 5 Series">
+      <div class="car-info">
+        <h3>BMW 5 Series</h3>
+        <p>Dynamic driving experience with a luxurious, tech-forward cabin.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="A6.jpg" alt="Audi A6">
+      <div class="car-info">
+        <h3>Audi A6</h3>
+        <p>Elegant design and performance, ideal for both city and highway driving.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="class.jpg" alt="Mercedes C-Class">
+      <div class="car-info">
+        <h3>Mercedes-Benz C-Class</h3>
+        <p>Luxury and innovation packed into a refined mid-size sedan.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

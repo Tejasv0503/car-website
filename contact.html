@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - CarZone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-details,
+    .contact-form {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-info {
+      line-height: 1.8;
+    }
+
+    .contact-info strong {
+      display: inline-block;
+      width: 100px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #005fa3;
+    }
+
+    .map {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      margin-right: 900px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html">← Back to Home</a>
+    <h1>Contact Us</h1>
+
+    <div class="grid">
+      <div class="contact-details">
+        <h2>Our Location</h2>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 1234 Auto Drive, Carville, CA 90210</p>
+          <p><strong>Phone:</strong> (123) 456-7890</p>
+          <p><strong>Email:</strong> contact@carzone.com</p>
+          <p><strong>Hours:</strong> Mon–Fri: 9am–6pm, Sat: 10am–4pm</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="map">
+      <h2 style="margin-top: 40px;">Find Us on the Map</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29065.752283572045!2d75.80112546828855!3d24.408456956503446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3965058b594e9d13%3A0x3409ddb8b46e7863!2sBhawani%20Mandi%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1746163577500!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>

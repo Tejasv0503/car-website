@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Website</title>
+  <style>
+    /* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  background-color: #111;
+  color: white;
+}
+.hero img {
+  max-width: 90%;
+  margin-top: 20px;
+  border-radius: 12px;
+
+}
+/* Header Base */
+.main-header {
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-list li {
+  position: relative;
+}
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-list a:hover {
+  color: #e63946;
+}
+
+/* Submenu */
+.has-submenu:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #222;
+  padding: 10px 0;
+  border-radius: 6px;
+  min-width: 150px;
+}
+/* Base Header Styles — same as before */
+.main-header {
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Nav */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-list li {
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-list li:hover {
+  transform: translateY(-2px);
+}
+
+/* Links */
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e63946;
+  transition: width 0.3s ease;
+}
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 150px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.has-submenu:hover .submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.submenu li {
+  padding: 10px 20px;
+}
+.submenu a {
+  color: #ccc;
+  transition: color 0.3s;
+}
+.submenu a:hover {
+  color: white;
+}
+
+/* Responsive (optional mobile slide-in menu) */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: #111;
+    padding: 20px;
+    display: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .nav-list.show {
+    display: flex;
+    transform: translateX(0%);
+  }
+}
+
+.submenu li {
+  padding: 10px 20px;
+}
+.submenu a {
+  color: #ccc;
+}
+.submenu a:hover {
+  color: white;
+}
+
+/* Responsive (basic) */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 10px;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+}
+
+
+/* Models */
+.models h2 {
+  margin-bottom: 40px;
+}
+.model-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Testimonial Base */
+.testimonials {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+.testimonial {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.testimonial.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animated.delay {
+  transition-delay: 0.3s;
+}
+
+
+/* Contact */
+.contact {
+  background: #111;
+  color: white;
+}
+.contact a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+.contact a:hover {
+  background: #c5283d;
+}
+.card-3d {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 20px auto;
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-3d:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-front {
+  background: white;
+}
+.card-front img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.card-front h3 {
+  margin: 10px 0;
+}
+.card-back {
+  background: #111;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+
+  </style>
+
+</head>
+<body>
+  <!-- 1. Hero Section -->
+
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">CarZone</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="home.html">Home</a></li>
+          <li class="has-submenu">
+            <a href="#">Models</a>
+            <ul class="submenu">
+              <li><a href="suv.html">SUVs</a></li>
+              <li><a href="sedans.html">Sedans</a></li>
+              <li><a href="#">Electric</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <h1>Drive Your Dream Car</h1>
+    <p>Explore the finest vehicles of the year</p>
+    <img src="OIP-removebg-preview.png" alt="Featured Car" />
+  </section>
+  
+
+  
+  <!-- 2. Car Models -->
+  <section class="models">
+    <h2>Our Car Models</h2>
+    <div class="model-grid">
+      <div class="card-3d">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="1-removebg-preview.png" alt="Car Front">
+            <h3>Ford Mustang</h3>
+          </div>
+          <div class="card-back">
+            <h4>Electric SUV</h4>
+            <p>Range: 270 miles<br>Top Speed: 195 mph</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-3d">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="2-removebg-preview.png" alt="Car Front">
+            <h3>Mercedes-AMG GTR</h3>
+          </div>
+          <div class="card-back">
+            <h4>Electric SUV</h4>
+            <p>Range: 460 miles<br>Top Speed: 205 mph</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-3d">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="3-removebg-preview.png" alt="Car Front">
+            <h3>Alfa Romeo 4C</h3>
+          </div>
+          <div class="card-back">
+            <h4>Electric SUV</h4>
+            <p>Range: 600 miles<br>Top Speed: 255 mph</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- 4. Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial animated">
+      <p>"Absolutely love my new ride! The process was smooth."</p>
+      <span>– Sarah J.</span>
+    </div>
+    <div class="testimonial animated delay">
+      <p>"Great selection of cars and pricing. Highly recommend!"</p>
+      <span>– Marcus D.</span>
+    </div>
+  </section>
+  
+
+  <!-- 5. Contact -->
+  <section class="contact">
+    <h2>Ready to Drive?</h2>
+    <p>Schedule a test drive or talk to our experts today.</p>
+    <a href="contact.html">Contact Us</a>
+  </section>
+  <script>
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  const reveal = () => {
+    testimonials.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('load', reveal);
+</script>
+
+</body>
+</html>
